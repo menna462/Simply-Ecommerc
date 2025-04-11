@@ -501,6 +501,29 @@
 .container-fluid {
   margin-top: 3rem;
 }
+.products {
+  margin-right: 15px; 
+}
+
+.best-seller,
+.sale-link {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 15px; 
+}
+
+.best-seller {
+  color: rgb(16, 104, 7);
+  font-weight: bold;
+}
+
+.sale {
+  color: rgb(44, 44, 45);
+}
+
+.hot {
+  color: rgb(88, 88, 84) !important;
+}
 
 .best-seller,
 .sale-link {
@@ -521,27 +544,7 @@
   color: rgb(88, 88, 84) !important;
 }
 
-/*  من أن اللينكات بجانب بعض */
-.best-seller,
-.sale-link {
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.best-seller {
-  color: rgb(16, 104, 7);
-  font-weight: bold;
-}
-
-.sale {
-  color: rgb(44, 44, 45);
-}
-
-.hot {
-  color: rgb(88, 88, 84) !important;
-}
-
-* جعل الأسهم في أقصى اليمين */ .nav-arrows {
+.nav-arrows {
   display: flex;
   gap: 10px;
   font-size: 20px;
@@ -574,31 +577,37 @@
   display: flex;
 }
 
+.col-12.col-md-4:nth-child(-n+3) {
+  margin-bottom: 30px; 
+}
+
 .product-card {
-  width: 100%;
-  height: 500px;
-  background-color: white;
-  border: 1px solid #ddd;
+  height: 350px;
+  padding: 10px;
+  border: 1px solid #eee;
   border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative; 
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 10px;
-  position: relative;
+  z-index: 2; 
 }
 
 .product-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  z-index: 10; 
 }
 
 .product-image img {
-  width: 100%;
+  width: 100% !important;
   height: 170px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1); 
 }
 
 .discount {
@@ -612,23 +621,25 @@
   font-size: 12px;
   font-weight: bold;
   z-index: 10;
-  opacity: 1;
 }
 
-.product-info {
+.product-details {
   padding: 10px;
   flex-grow: 1;
+  position: relative; 
 }
 
 .category {
   font-size: 12px;
   color: gray;
+  margin-bottom: 5px;
 }
 
 .price {
   font-size: 16px;
   font-weight: bold;
   color: green;
+  margin-bottom: 10px;
 }
 
 .old-price {
@@ -636,15 +647,40 @@
   color: gray;
 }
 
-.product-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+.product-description {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(20px); 
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  z-index: 2; 
+  font-size:30px;
+ color: black;
+  font-size: 14px;
+}
+
+.product-card:hover .product-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-actions {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 10px; 
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  z-index: 1; 
 }
 
 .product-card:hover .product-actions {
@@ -652,21 +688,22 @@
   transform: translateY(0);
 }
 
-/* تنسيق الزر */
+
 .btn-success {
   background-color: #1b5805;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px; 
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   text-transform: uppercase;
-  width: 90%;
-  display: flex;
-  align-items: center;
+  /* width: 90%; */ 
+  min-width: 120px; 
+  display: inline-flex;
+    align-items: center;
   justify-content: center;
   gap: 8px;
   position: relative;
@@ -691,26 +728,24 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .btn-success:hover {
   background-color: #ffcc00;
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
+  align-items: center !important;
+  width: 35px; 
+  height: 35px; 
   border-radius: 50%;
   background-color: #f5f5f5;
   color: #333;
-  font-size: 14px;
+  font-size: 16px; 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(0.8); 
 }
 
 .product-card:hover .icon {
@@ -729,7 +764,6 @@
   color: red;
   border: 1px solid red;
 }
-
 .favorite-icon:hover {
   background-color: red;
   color: white;
@@ -755,13 +789,30 @@
   color: white;
 }
 
+
 /* سكشن Bundles */
-.bundle-offers {
-  text-align: center !important;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
+.container{
+  margin-bottom: 4rem;
 }
+.title-with-underline {
+  position: relative;
+  display: block; 
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 3rem;
+}
+.title-with-underline::after {
+  content: "";
+  display: block;
+  width: 10%; 
+  height: 3px;
+  background-color: rgb(190, 179, 24);
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -959,6 +1010,41 @@
 
 .footer ul li a:hover {
   color: #ffeb99;
+}
+.footer .social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.footer .social-icon {
+  font-size: 15px;
+  color: #e4dcdc;
+  background-color: #080808;
+  padding: 12px;
+  border-radius: 30%;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icon:hover {
+  color: #050202;
+  background-color: #007bff; 
+}
+
+.footer .facebook:hover {
+  background-color: #3b5998;
+}
+
+.footer .instagram:hover {
+  background-color: #e4405f;
+}
+
+.footer .whatsapp:hover {
+  background-color: #25d366;
+}
+
+.footer .social-icon i {
+  margin: 0;
 }
 
 @media (max-width: 768px) {

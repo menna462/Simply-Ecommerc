@@ -162,3 +162,4 @@ function toggleDetails(button) {
       button.innerHTML = "🔽 عرض التفاصيل";
   }
 }
+
