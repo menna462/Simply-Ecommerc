@@ -961,21 +961,12 @@
   color: #ffeb99;
 }
 
-/* .image-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* .image-column img {
-  width: 120px;
-  height: auto;
-  margin: 10px 0;
-  border-radius: 5px;
-} */
 @media (max-width: 768px) {
   .footer {
     padding-top: 20px;
     height: 100%;
+  }
+  .logo-footer {
+    margin-top: 0px;
   }
 }
