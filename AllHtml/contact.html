@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>contact</title>
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -16,7 +16,7 @@
   />
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../Allcss/about.css" />
+  <link rel="stylesheet" href="../Allcss/contact.css" />
   <!-- swiper css -->
   <link
     rel="stylesheet"
@@ -337,74 +337,153 @@
 <!--  end fixed -->
 
 
-
-
-  <!-- start about -->
-  <div class="container custom-container mb-5">
-    <div class="row g-4 align-items-center">
-      <div class="col-md-6">
-        <img src="../images/about.jpg.webp" alt="Office" class="img-fluid rounded hanging-chair">
-      </div>
-        <div class="col-md-6">
-            <h5 class="text-danger">Revolutionizing Graphic Stock</h5>
-            <h2 class="fw-bold">A little introduction about us</h2>
-            <p>Your one-stop shop for all your paid software and website plans at reasonable prices.</p>
-            <h2 class="fw-bold">Why Simply Software</h2>
-            <p>We offer affordable plans with high quality and a real guarantee.
-
-                We have over 1,500 happy customers.</p>
-                <h2 class="fw-bold">About our digital store</h2>
-            <p>At Simply Software, we believe in using all our efforts to help you save money and time.
-
-                We have a dedicated team who are always eager to assist you and make your subscriptions simple and fast.
-                
-                We at Simply Software are committed to helping you meet all your needs and continually improving your business.</p>
-            <hr>
+<div class="container contact">
+  <div class="row">
+    <div class="col-md-6 qustion">
+      <h2 class="mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+      <div id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <p>
+            <a
+              data-toggle="collapse"
+              class="text-reset text-decoration-none"
+              href="#collapsone"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapsone"
+            >
+              How can I receive my account details?
+            </a>
+          </p>
+          <div class="collapse" id="collapsone" data-parent="#faqAccordion">
+            <div class="card card-body">
+              For shared accounts, you'll get an email and password. For
+              personal accounts, please provide your email, and we will
+              activate your subscription.
+            </div>
+          </div>
         </div>
+        <hr />
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <p>
+            <a
+              data-toggle="collapse"
+              class="text-reset text-decoration-none"
+              href="#collapstwo"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapstwo"
+            >
+              How do I reset my password?
+            </a>
+          </p>
+          <div class="collapse" id="collapstwo" data-parent="#faqAccordion">
+            <div class="card card-body">
+              To reset your password, go to the login page and click "Forgot
+              Password" to receive a reset link.
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <p>
+            <a
+              data-toggle="collapse"
+              class="text-reset text-decoration-none"
+              href="#collapsthree"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapsthree"
+            >
+              Can I change my subscription plan?
+            </a>
+          </p>
+          <div
+            class="collapse"
+            id="collapsthree"
+            data-parent="#faqAccordion"
+          >
+            <div class="card card-body">
+              Yes, you can change your subscription plan anytime from the
+              account settings.
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
     </div>
+    <div class="col-md-6 form-massage">
+      <h3>Contact Us for Any Questions</h3>
+      <form class="contact-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" id="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-4">Send Message</button>
+      </form>
+    </div>
+  </div>
 </div>
-<!-- end about -->
 
 
 
 
-    <!--footer  -->
-    <div class="footer">
-      <div class="container ">
-        <div class="row">
-            <div class="col-md-3">
-              <div class="top-footer">
-                <img  class="logo-footer" src="../images/logofooter.png" alt="Logo">
-                <p>Your subscriptions made simple</p>
-              </div>
-                <div class="information">
-                  <p>Address.....</p>
-                  <p>Phone: 01101751314</p>
-                  <p>WhatsApp.....</p>
+
+  
+      <!--footer  -->
+      <div class="footer">
+        <div class="container ">
+          <div class="row">
+              <div class="col-md-3">
+                <div class="top-footer">
+                  <img  class="logo-footer" src="../images/logofooter.png" alt="Logo">
+                  <p>Your subscriptions made simple</p>
                 </div>
-            </div>
-            <div class="col-md-3">
-              <h4>Useful links</h4>
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Refunds</a></li>
-                <li><a href="#">Terms and Conditions</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <!-- ضع هنا صور أو محتوى إضافي حسب الحاجة -->
-              <img src="../img/" alt="Image 1">
-              <img src="../img/" alt="Image 2">
-            </div>
+                  <div class="information">
+                    <p>Address.....</p>
+                    <p>Phone: 01101751314</p>
+                    <p>WhatsApp.....</p>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                <h4>Useful links</h4>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Refunds</a></li>
+                  <li><a href="#">Terms and Conditions</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <!-- ضع هنا صور أو محتوى إضافي حسب الحاجة -->
+                <img src="../img/" alt="Image 1">
+                <img src="../img/" alt="Image 2">
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- end footer -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../bootstrap/js/jquery-3.7.1.min.js"></script>
-    <script src="../bootstrap/js/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.js"></script>
+      <!-- end footer -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="../js/main.js"></script>
+      <script src="../bootstrap/js/jquery-3.7.1.min.js"></script>
+      <script src="../bootstrap/js/popper.min.js"></script>
+      <script src="../bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

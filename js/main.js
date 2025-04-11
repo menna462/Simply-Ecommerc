@@ -142,3 +142,23 @@ var swiper = new Swiper(".swiper", {
         pagination: { el: ".swiper-pagination", clickable: true },
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
     });
+
+
+
+
+// start shop
+function toggleDetails(button) {
+  var card = button.parentElement;
+  var details = card.querySelector(".details");
+  var actionBar = card.querySelector(".action-bar");
+
+  if (details.style.display === "none" || details.style.display === "") {
+      details.style.display = "block";
+      actionBar.style.display = "flex";
+      button.innerHTML = "🔼 إخفاء التفاصيل";
+  } else {
+      details.style.display = "none";
+      actionBar.style.display = "none";
+      button.innerHTML = "🔽 عرض التفاصيل";
+  }
+}
