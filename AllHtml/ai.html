@@ -10,9 +10,10 @@
     rel="stylesheet"
   />
   <!-- Font Awesome -->
-   <!-- Font Awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    rel="stylesheet"
+  />
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../Allcss/shop.css" />
@@ -108,20 +109,19 @@
               <a href="./contact.html">Contact</a>
               <a href="./about.html">About Us</a>
             </div>
+
             <div id="extra" class="menu-section">
-              <a href="../AllHtml/ai.html">Ai</a>
-              <a href="../AllHtml/windows.html">Windows</a>
-              <a href="../AllHtml/software.html">software</a>
-              <a href="../AllHtml/mac.html">mac</a>
-              <a href="../AllHtml/office.html">office</a>
-              <a href="../AllHtml/design.html">design</a>
-              <a href="../AllHtml/bundles.html">bundles</a>
+              <a href="#">Ai</a>
+              <a href="#">Windows</a>
+              <a href="#">software</a>
+              <a href="#">mac</a>
+              <a href="#">office</a>
+              <a href="#">design</a>
             </div>
           </div>
           <div class="login-register-container">
             <button class="login-register-button">
-              <a href="./login.html" class="login-link">LOGIN</a> /
-              <a href="./register.html" class="register-link">REGISTER</a>
+              <span class="text">LOGIN / REGISTER</span>
             </button>
           </div>
 
@@ -208,14 +208,15 @@
                           <li>Motion Array</li>
                           <li>Freepik (shared Accounts)</li>
                           <li>Capcut</li>
-                          
-                          <br>
+                          <li>Autodesk</li>
+                          <li>Envato Elements</li>
+                          <li>LinkedIn</li>
                           <li>ChatGPT</li>
                           <li>Midjourney AI</li>
                           <li>Runway Video AI</li>
-                          <br>
                           <li>Canva Pro</li>
-                        
+                          <li>Pacdora</li>
+                          <li>Avast Ultimate</li>
                         </ul>
                       </div>
                       <div class="column">
@@ -228,8 +229,6 @@
                           <li>Office 2016</li>
                           <li>Office 2019</li>
                           <li>Office 2021</li>
-                          <li>Pacdora</li>
-                          <li>Avast Ultimate</li>
                         </ul>
                       </div>
                     </div>
@@ -249,89 +248,92 @@
           </nav>
         </div>
         <div class="col-lg-3 d-none d-lg-block">
-          <aside class="category-sidebar active">
+          <aside class="category-sidebar">
+            <!-- تعديل اسم الكلاس هنا -->
             <ul class="list-group">
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('ai-popup')"
-                  onmouseout="hidePopup('ai-popup')">
-                <a href="./ai.html">
-                  <i class="fas fa-brain"></i> Ai
-                </a>
+              <li
+                class="list-group-item"
+                
+              >
+                <i class="fas fa-brain"></i> Ai
                 <div class="popup-box" id="ai-popup">
-                  <p>Adobe all apps, Motion Array, Freepik, Capcut, Autodesk, Envato Elements, Linkedin, ChatGPT, Midjourney AI, Runway video AI, Canva Pro, Pacdora, Avast Ultimate</p>
+                  <p>
+                    Adobe all apps, Motion Array, Freepik, Capcut, Autodesk,
+                    Envato Elements, Linkedin, ChatGPT, Midjourney AI, Runway
+                    video AI, Canva Pro, Pacdora, Avast Ultimate
+                  </p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('windows-popup')"
-                  onmouseout="hidePopup('windows-popup')">
-                <a href="./windows.html">
-                  <i class="fab fa-windows"></i> Windows
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('windows-popup')"
+                onmouseout="hidePopup('windows-popup')"
+              >
+                <i class="fab fa-windows"></i> Windows
                 <div class="popup-box" id="windows-popup">
                   <p>Windows 10 Pro, Windows 11 Pro, Windows Server</p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('software-popup')"
-                  onmouseout="hidePopup('software-popup')">
-                <a href="./software.html">
-                  <i class="fas fa-laptop"></i> Software
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('software-popup')"
+                onmouseout="hidePopup('software-popup')"
+              >
+                <i class="fas fa-laptop"></i> Software
                 <div class="popup-box" id="software-popup">
-                  <p>Microsoft Office 365, Adobe Photoshop, AutoCAD, CorelDRAW</p>
+                  <p>
+                    Microsoft Office 365, Adobe Photoshop, AutoCAD, CorelDRAW
+                  </p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('mac-popup')"
-                  onmouseout="hidePopup('mac-popup')">
-                <a href="./mac.html">
-                  <i class="fab fa-apple"></i> Mac
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('mac-popup')"
+                onmouseout="hidePopup('mac-popup')"
+              >
+                <i class="fab fa-apple"></i> Mac
                 <div class="popup-box" id="mac-popup">
                   <p>Final Cut Pro, Logic Pro, Parallels Desktop</p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('office-popup')"
-                  onmouseout="hidePopup('office-popup')">
-                <a href="./office.html">
-                  <i class="fas fa-briefcase"></i> Office
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('office-popup')"
+                onmouseout="hidePopup('office-popup')"
+              >
+                <i class="fas fa-briefcase"></i> Office
                 <div class="popup-box" id="office-popup">
                   <p>Microsoft Word, Excel, PowerPoint, Outlook</p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('design-popup')"
-                  onmouseout="hidePopup('design-popup')">
-                <a href="./design.html">
-                  <i class="fas fa-paint-brush"></i> Design
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('design-popup')"
+                onmouseout="hidePopup('design-popup')"
+              >
+                <i class="fas fa-paint-brush"></i> Design
                 <div class="popup-box" id="design-popup">
                   <p>تفاصيل عن Design.</p>
                 </div>
               </li>
-          
-              <li class="list-group-item"
-                  onmouseover="showPopup('bundles-popup')"
-                  onmouseout="hidePopup('bundles-popup')">
-                <a href="./bundles.html">
-                  <i class="fas fa-box"></i> Bundles
-                </a>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('bundles-popup')"
+                onmouseout="hidePopup('bundles-popup')"
+              >
+                <i class="fas fa-box"></i> Bundles
                 <div class="popup-box" id="bundles-popup">
                   <p>تفاصيل عن Bundles.</p>
                 </div>
               </li>
-          
             </ul>
           </aside>
-          
         </div>
       </div>
     </div>
@@ -342,35 +344,35 @@
  <!-- Page Header Start -->
 <div class="container-fluid" style="background-image: url('../images/shop\ all.jpg'); background-size: cover; background-position: center; min-height: 400px;">
   <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px;">
-      <h1 class="font-weight-semi-bold text-uppercase mb-3 text-white">Shop</h1>
+      <h1 class="font-weight-semi-bold text-uppercase mb-3 text-white">AI</h1>
       <div class="d-flex flex-wrap justify-content-center">
           <div class="category-item mx-3">
-            <a href="../AllHtml/ai.html" class="text-white category-link" data-category="ai">Ai</a>
+            <a href="../AllHtml/ai.html" class="text-white active-category">Ai</a>
             <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/windows.html" class="text-white category-link" data-category="windows">Windows</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="../AllHtml/windows.html" class="text-white ">Windows</a>
+              <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/software.html" class="text-white category-link" data-category="software">Software</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="" class="text-white">Software</a>
+              <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/mac.html" class="text-white category-link" data-category="mac">Mac</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="" class="text-white">Mac</a>
+              <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/office.html" class="text-white category-link" data-category="office">Office</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="" class="text-white">Office</a>
+              <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/design.html" class="text-white category-link" data-category="design">Design</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="" class="text-white">Design</a>
+              <p class="text-whitee">2 Product</p>
           </div>
           <div class="category-item mx-3">
-            <a href="../AllHtml/bundles.html" class="text-white category-link" data-category="bundles">Bundles</a>
-            <p class="text-whitee">2 Product</p>
+              <a href="" class="text-white">Bundles</a>
+              <p class="text-whitee">2 Product</p>
           </div>
       </div>
   </div>
@@ -384,7 +386,7 @@
   <div class="row  shop-product">
     <div class="banner">
       <h1>Shop</h1>
-      <p><a href="home.html" class="breadcrumb-link">Home</a> / <a href="/shop" class="breadcrumb-link">Shop</a></p>
+      <p><a href="home.html" class="breadcrumb-link">Home</a> / <a href="../AllHtml/ai.html" class="breadcrumb-link">AI</a></p>
     </div>
     <div class="allproduct">
       <div class="container">
@@ -507,41 +509,36 @@
 <!-- end body shop -->
     <!--footer  -->
     <div class="footer">
-      <div class="container">
+      <div class="container ">
         <div class="row">
-          <div class="col-md-3">
-            <div class="top-footer">
-              <img class="logo-footer" src="../images/logofooter.png" alt="Logo">
-              <p>Your subscriptions made simple</p>
+            <div class="col-md-3">
+              <div class="top-footer">
+                <img  class="logo-footer" src="../images/logofooter.png" alt="Logo">
+                <p>Your subscriptions made simple</p>
+              </div>
+                <div class="information">
+                  <p>Address.....</p>
+                  <p>Phone: 01101751314</p>
+                  <p>WhatsApp.....</p>
+                </div>
             </div>
-            <div class="information">
-              <p>Address.....</p>
-              <p>Phone: 01101751314</p>
-              <p>WhatsApp.....</p>
+            <div class="col-md-3">
+              <h4>Useful links</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refunds</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
             </div>
-          </div>
-          <div class="col-md-3">
-            <h4>Useful links</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Refunds</a></li>
-              <li><a href="#">Terms and Conditions</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <img src="../img/" alt="Image 1">
-            <img src="../img/" alt="Image 2">
-            <div class="social-icons">
-              <a href="#" class="me-3 text-white"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="me-3 text-white"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#" class="me-3 text-white"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-          </div>
+            <div class="col-md-3">
+              <!-- ضع هنا صور أو محتوى إضافي حسب الحاجة -->
+              <img src="../img/" alt="Image 1">
+              <img src="../img/" alt="Image 2">
+            </div>
         </div>
       </div>
-    </div> 
+    </div>
   <!-- end footer -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/main.js"></script>

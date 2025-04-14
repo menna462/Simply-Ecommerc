@@ -103,21 +103,29 @@
             </div>
 
             <div id="links" class="menu-section">
-              <a href="#">Home</a>
+              <a href="./home.html">Home</a>
               <a href="./shop.html">Shop</a>
               <a href="./contact.html">Contact</a>
               <a href="./about.html">About Us</a>
             </div>
 
             <div id="extra" class="menu-section">
-              <a href="#">Ai</a>
-              <a href="#">Windows</a>
-              <a href="#">software</a>
-              <a href="#">mac</a>
-              <a href="#">office</a>
-              <a href="#">design</a>
+              <a href="../AllHtml/ai.html">Ai</a>
+              <a href="../AllHtml/windows.html">Windows</a>
+              <a href="../AllHtml/software.html">software</a>
+              <a href="../AllHtml/mac.html">mac</a>
+              <a href="../AllHtml/office.html">office</a>
+              <a href="../AllHtml/design.html">design</a>
+              <a href="../AllHtml/bundles.html">bundles</a>
             </div>
           </div>
+          <div class="login-register-container">
+            <button class="login-register-button">
+              <a href="./login.html" class="login-link">LOGIN</a> /
+              <a href="./register.html" class="register-link">REGISTER</a>
+            </button>
+          </div>
+          
 
           <div class="currency-select-wrapper">
             <div class="currency-select" onclick="toggleCurrencyMenu()">
@@ -174,9 +182,9 @@
         >
           <!-- زر فتح وإغلاق السايدبار -->
           <button
-            class="btn category-sidebar-toggle"
+            class="btn category-sidebar-toggle "
             data-toggle="collapse"
-            data-target=".category-sidebar"
+            data-target=".category-sidebar "
           >
             <i class="fas fa-bars"></i> BROWSE CATEGORIES
             <i class="fas fa-chevron-down arrow-icon"></i>
@@ -202,15 +210,14 @@
                           <li>Motion Array</li>
                           <li>Freepik (shared Accounts)</li>
                           <li>Capcut</li>
-                          <li>Autodesk</li>
-                          <li>Envato Elements</li>
-                          <li>LinkedIn</li>
+                          
+                          <br>
                           <li>ChatGPT</li>
                           <li>Midjourney AI</li>
                           <li>Runway Video AI</li>
+                          <br>
                           <li>Canva Pro</li>
-                          <li>Pacdora</li>
-                          <li>Avast Ultimate</li>
+                        
                         </ul>
                       </div>
                       <div class="column">
@@ -223,6 +230,8 @@
                           <li>Office 2016</li>
                           <li>Office 2019</li>
                           <li>Office 2021</li>
+                          <li>Pacdora</li>
+                          <li>Avast Ultimate</li>
                         </ul>
                       </div>
                     </div>
@@ -242,94 +251,91 @@
           </nav>
         </div>
         <div class="col-lg-3 d-none d-lg-block">
-          <aside class="category-sidebar">
-            <!-- تعديل اسم الكلاس هنا -->
+          <aside class="category-sidebar active">
             <ul class="list-group">
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('ai-popup')"
-                onmouseout="hidePopup('ai-popup')"
-              >
-                <i class="fas fa-brain"></i> Ai
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('ai-popup')"
+                  onmouseout="hidePopup('ai-popup')">
+                <a href="./ai.html">
+                  <i class="fas fa-brain"></i> Ai
+                </a>
                 <div class="popup-box" id="ai-popup">
-                  <p>
-                    Adobe all apps, Motion Array, Freepik, Capcut, Autodesk,
-                    Envato Elements, Linkedin, ChatGPT, Midjourney AI, Runway
-                    video AI, Canva Pro, Pacdora, Avast Ultimate
-                  </p>
+                  <p>Adobe all apps, Motion Array, Freepik, Capcut, Autodesk, Envato Elements, Linkedin, ChatGPT, Midjourney AI, Runway video AI, Canva Pro, Pacdora, Avast Ultimate</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('windows-popup')"
-                onmouseout="hidePopup('windows-popup')"
-              >
-                <i class="fab fa-windows"></i> Windows
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('windows-popup')"
+                  onmouseout="hidePopup('windows-popup')">
+                <a href="./windows.html">
+                  <i class="fab fa-windows"></i> Windows
+                </a>
                 <div class="popup-box" id="windows-popup">
                   <p>Windows 10 Pro, Windows 11 Pro, Windows Server</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('software-popup')"
-                onmouseout="hidePopup('software-popup')"
-              >
-                <i class="fas fa-laptop"></i> Software
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('software-popup')"
+                  onmouseout="hidePopup('software-popup')">
+                <a href="./software.html">
+                  <i class="fas fa-laptop"></i> Software
+                </a>
                 <div class="popup-box" id="software-popup">
-                  <p>
-                    Microsoft Office 365, Adobe Photoshop, AutoCAD, CorelDRAW
-                  </p>
+                  <p>Microsoft Office 365, Adobe Photoshop, AutoCAD, CorelDRAW</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('mac-popup')"
-                onmouseout="hidePopup('mac-popup')"
-              >
-                <i class="fab fa-apple"></i> Mac
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('mac-popup')"
+                  onmouseout="hidePopup('mac-popup')">
+                <a href="./mac.html">
+                  <i class="fab fa-apple"></i> Mac
+                </a>
                 <div class="popup-box" id="mac-popup">
                   <p>Final Cut Pro, Logic Pro, Parallels Desktop</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('office-popup')"
-                onmouseout="hidePopup('office-popup')"
-              >
-                <i class="fas fa-briefcase"></i> Office
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('office-popup')"
+                  onmouseout="hidePopup('office-popup')">
+                <a href="./office.html">
+                  <i class="fas fa-briefcase"></i> Office
+                </a>
                 <div class="popup-box" id="office-popup">
                   <p>Microsoft Word, Excel, PowerPoint, Outlook</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('design-popup')"
-                onmouseout="hidePopup('design-popup')"
-              >
-                <i class="fas fa-paint-brush"></i> Design
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('design-popup')"
+                  onmouseout="hidePopup('design-popup')">
+                <a href="./design.html">
+                  <i class="fas fa-paint-brush"></i> Design
+                </a>
                 <div class="popup-box" id="design-popup">
                   <p>تفاصيل عن Design.</p>
                 </div>
               </li>
-
-              <li
-                class="list-group-item"
-                onmouseover="showPopup('bundles-popup')"
-                onmouseout="hidePopup('bundles-popup')"
-              >
-                <i class="fas fa-box"></i> Bundles
+          
+              <li class="list-group-item"
+                  onmouseover="showPopup('bundles-popup')"
+                  onmouseout="hidePopup('bundles-popup')">
+                <a href="./bundles.html">
+                  <i class="fas fa-box"></i> Bundles
+                </a>
                 <div class="popup-box" id="bundles-popup">
                   <p>تفاصيل عن Bundles.</p>
                 </div>
               </li>
+          
             </ul>
           </aside>
+          
         </div>
+        <!-- slider -->
         <div class="col-lg-9">
           <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -337,7 +343,7 @@
               <div class="carousel-item active">
                 <img
                   class="d-block w-100"
-                  src="../images/baner1.jpg"
+                  src="../images/bundle2.webp"
                   alt="Slide 1"
                 />
                 <div class="carousel-caption text-center">
@@ -353,7 +359,7 @@
               <div class="carousel-item">
                 <img
                   class="d-block w-100"
-                  src="../images/baner2.jpg"
+                  src="../images/bundl3.webp"
                   alt="Slide 2"
                 />
                 <div class="carousel-caption text-center">
@@ -395,367 +401,762 @@
     </div>
     <hr />
     <!-- End Navbar -->
-<!--  endfixed -->
-    <!-- section products -->
-    <div class="container-fluid">
-      <div class="row align-items-center justify-content-between">
-        <!-- اللينكات على اليسار -->
-        <div class="col-md-6 d-flex align-items-center">
-          <span class="products fw-bold fs-4 me-3">PRODUCTS</span>
-          <a href="#" class="best-seller text-decoration-none me-3"
-            >BEST SELLER</a
-          >
-          <a href="#" class="sale-link sale text-decoration-none me-3">SALE</a>
-          <a href="#" class="sale-link hot text-decoration-none">HOT</a>
-        </div>
+<!-- end fixed -->
 
-        <!-- الأسهم على أقصى اليمين -->
-        <div class="col-md-6 d-flex justify-content-end">
-          <div class="nav-arrows">
-            <i class="fa-solid fa-chevron-left left-arrow"></i>
-            <i class="fa-solid fa-chevron-right right-arrow"></i>
-          </div>
+
+<!-- start products -->
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-between">
+      <!-- اللينكات على اليسار -->
+      <div class="  col-md-6  ">
+        <span class="products fw-bold fs-4 me-3">PRODUCTS</span>
+        <a href="#" class="tab-link active" data-tab="best-seller">BEST SELLER</a>
+        <a href="#" class="tab-link" data-tab="sale">SALE</a>
+        <a href="#" class="tab-link" data-tab="hot">HOT</a>
+      </div>
+
+      <!-- الأسهم على أقصى اليمين -->
+      <div class="col-md-6 d-flex justify-content-end">
+        <div class="nav-arrows">
+          <i class="fa-solid fa-chevron-left left-arrow"></i>
+          <i class="fa-solid fa-chevron-right right-arrow"></i>
         </div>
       </div>
     </div>
+  </div>
+  <div class="container my-5">
+    <div class="row ">
+<div class="products-content">
 
-    <div class="container my-5">
-      <div class="row ">
-        <!-- group1 -->
-        <div class="product-group active" id="group1">
-          <div class="row mb-4">
+  <!-- BEST SELLER مجموعتين -->
+  <div class="product-groups" id="best-seller">
+    <div class="product-group active" id="best-group1">
+      <div class="row mb-4">
            
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
             </div>
-           
+            </a>
           </div>
-          <div class="row">
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
             </div>
+            </a>
           </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
           </div>
-        <div class="product-group" id="group2">
-          <div class="row g-4">
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner1.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner1.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner1.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="../images/baner2.jpg" alt="Product" />
-                  <span class="discount">-61%</span>
-                </div>
-                <div class="product-details">
-                  <h3>Freepik (Shared Account)</h3>
-                  <p class="category text-muted">Design</p>
-                  <p class="price">
-                    299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
-                  </p>
-                </div>
-                <div class="product-description">
-                  Lorem, ipsum dolor sit amet consectetur    </div>
-                <div class="product-actions">
-                  <a href="detailsproducts.html"class="link">
-                  <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                  <button class="btn btn-success btn-sm">
-                    <span>Select Options</span>
-                  </button>
-                  <span class="icon"><i class="fa-solid fa-search"></i></span>
-                </div>
-                </a>
-              </div>
-            </div>
-
-          </div>
-          </div>      
+        </div>           
       </div>
-    </div>
-   
-    <!-- end products -->
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/bundl3.webp" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/bundle2.webp" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+    <div class="product-group" id="best-group2">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner1.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner1.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner1.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+        </div>
+  </div>
+
+  <!-- SALE مجموعتين -->
+  <div class="product-groups d-none" id="sale">
+    <div class="product-group active" id="sale-group1">
+      <div class="row mb-4">
+           
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>           
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>    </div>
+    <div class="product-group" id="sale-group2">
+      <div class="row mb-4">
+           
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>           
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/baner2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+  </div>
+
+  <!-- HOT مجموعة واحدة -->
+  <div class="product-groups d-none" id="hot">
+    <div class="product-group active" id="hot-group1">
+      <div class="row mb-4">
+           
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/bundl3.webp" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="../images/Bundels-2.jpg" alt="Product" />
+              <span class="discount">-61%</span>
+            </div>
+            <div class="product-details">
+              <h3>Freepik (Shared Account)</h3>
+              <p class="category text-muted">Design</p>
+              <p class="price">
+                299 EGP - <span class="old-price text-decoration-line-through">3,150 EGP</span>
+              </p>
+            </div>
+            <div class="product-description">
+              Lorem, ipsum dolor sit amet consectetur    </div>
+            <div class="product-actions">
+              <a href="detailsproducts.html"class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </div>
+            </a>
+          </div>
+        </div>
+               
+      </div>
+     
+        </div>
+  </div>
+
+</div>
+</div>
+</div>
+<!-- end products -->
 
 
-    <!-- section Bundle -->
+    <!-- start Bundle -->
     <div class="container">
       <div class="swiper">
         <h2 class="title-with-underline">Bundle</h2>
@@ -764,7 +1165,7 @@
           <swiper-slide class="col-lg-4 col-md-6 col-12">
             <div class="card shadow-sm position-relative bundle-card">
               <div class="position-relative overflow-hidden">
-                <img src="../images/baner1.jpg" class="card-img-top" alt="Bundle 1">
+                <img src="../images/Bundels-2.jpg" class="card-img-top" alt="Bundle 1">
                 <div class="bundle-icons">
                   <i class="fa-solid fa-heart"></i>
                   <i class="fa-solid fa-eye"></i>
@@ -784,7 +1185,7 @@
           <swiper-slide class="col-lg-4 col-md-6 col-12">
             <div class="card shadow-sm position-relative bundle-card">
               <div class="position-relative overflow-hidden">
-                <img src="../images/baner2.jpg" class="card-img-top" alt="Bundle 2">
+                <img src="../images/bundl3.webp" class="card-img-top" alt="Bundle 2">
                 <div class="bundle-icons">
                   <i class="fa-solid fa-heart"></i>
                   <i class="fa-solid fa-eye"></i>
@@ -804,7 +1205,7 @@
           <swiper-slide class="col-lg-4 col-md-6 col-12">
             <div class="card shadow-sm position-relative bundle-card">
               <div class="position-relative overflow-hidden">
-                <img src="../images/baner2.jpg" class="card-img-top" alt="Bundle 3">
+                <img src="../images/bundle2.webp" class="card-img-top" alt="Bundle 3">
                 <div class="bundle-icons">
                   <i class="fa-solid fa-heart"></i>
                   <i class="fa-solid fa-eye"></i>
@@ -831,7 +1232,7 @@
 
     <!-- end Bundle -->
      
-    <!--footer  -->
+    <!--start footer  -->
     <div class="footer">
       <div class="container">
         <div class="row">
@@ -859,15 +1260,16 @@
             <img src="../img/" alt="Image 1">
             <img src="../img/" alt="Image 2">
             <div class="social-icons">
-              <a href="https://www.facebook.com/simplysoft.aii" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/simplysoft.ai" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/01101751314" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-            </div>
+              <a href="#" class="me-3 text-white"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="me-3 text-white"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="me-3 text-white"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
           </div>
         </div>
       </div>
-    </div>
-    
+    </div>    
+  
     <!-- end footer -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/main.js"></script>
