@@ -92,12 +92,14 @@
 .search-box {
   display: flex;
   align-items: center;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
+  height: 35px; 
 }
 
 .search-box input {
+  height: 20px;
   padding: 10px;
   border: none;
   outline: none;
@@ -137,6 +139,59 @@
 .icons a:hover {
   color: #f4b400;
 }
+/* الحاوية */
+.login-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top:5px;
+}
+.login-register-button a {
+  color: #696305;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.login-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #685008; 
+  border: 2px solid #f4b400; 
+  border-radius: 15px; 
+  padding: 8px 15px; 
+
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 30px;
+}
+.login-register-button:first-child {
+  margin-right: 10px;  
+}
+
+
+.login-register-button:hover {
+  background-color: #f4b400; 
+  color: white;
+  border-color: #f4b400;
+}
+
+.login-register-button:active {
+  transform: scale(0.98);
+}
+
+.separator {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f4b400;
+}
+
 
 .currency-select-wrapper {
   position: relative;
@@ -208,6 +263,9 @@
   cursor: pointer;
   display: none;
 }
+.sidebar.active {
+  transform: translateX(0);
+}
 
 .sidebar {
   position: fixed;
@@ -249,13 +307,7 @@
 }
 /* nav and sidebar */
 
-.sidebar {
-  background: #757676;
-  color: white;
-  padding: 15px;
-  height: 100%;
-  background-color: #ede8e8 !important;
-}
+
 .sidebar .list-group-item {
   color: rgb(5, 2, 2);
   border: none;
@@ -264,6 +316,18 @@
 .sidebar .list-group-item:hover {
   background: #949ba2;
 }
+.list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.list-group-item a:hover {
+  text-decoration: underline;
+}
+
 /* تصميم النافذة المنبثقة بشكل أنيق للسايدبار */
 .popup-box {
   position: absolute;
@@ -322,6 +386,7 @@
   height: 300px;
   object-fit: cover;
 }
+
 .category-sidebar-toggle {
   height: 90%;
   background-color: rgb(7, 70, 7) !important;
@@ -344,14 +409,15 @@
 .shop-popup {
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 80vw;
+  left: 40%;
+  width: 60vw;
   background: rgb(110, 105, 47);
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 1000;
+  max-width: 800px;
 }
 
 .shop-popup-content {
@@ -359,6 +425,7 @@
   justify-content: space-between;
   gap: 30px;
   color: #ddd;
+  
 }
 
 .column {
@@ -390,16 +457,34 @@
   text-decoration: none;
   color: #525251;
   font-weight: bold;
+  position: relative; 
   transition: color 0.3s;
+}
+
+.main-nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(52, 224, 17);
+  transition: width 0.5s ease; 
+}
+
+.main-nav ul li a:hover::after {
+  width: 100%; 
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a.active {
-  color: #28a745;
+  color: #abadab; 
 }
+
 .special-offer {
   color: #f4b400;
 }
+
 
 .sidebar.open {
   display: block;
@@ -501,48 +586,29 @@
 .container-fluid {
   margin-top: 3rem;
 }
+.col-md-6{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.col-md-6 .active{
+  font-weight: bold;
+  color: #28a745 ;
+}
 .products {
-  margin-right: 15px; 
+  margin-right: 5px;
+  border-bottom: 2px solid rgb(2, 46, 2);
+  display: inline-block; 
+  padding-bottom: 5px; 
 }
 
-.best-seller,
-.sale-link {
+.tab-link {
   text-decoration: none;
   font-size: 18px;
-  margin-right: 15px; 
+  margin-right: 10px; 
+  color: #525251;
 }
 
-.best-seller {
-  color: rgb(16, 104, 7);
-  font-weight: bold;
-}
-
-.sale {
-  color: rgb(44, 44, 45);
-}
-
-.hot {
-  color: rgb(88, 88, 84) !important;
-}
-
-.best-seller,
-.sale-link {
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.best-seller {
-  color: rgb(16, 104, 7);
-  font-weight: bold;
-}
-
-.sale {
-  color: rgb(44, 44, 45);
-}
-
-.hot {
-  color: rgb(88, 88, 84) !important;
-}
 
 .nav-arrows {
   display: flex;
@@ -566,16 +632,22 @@
   color: black;
 }
 
+.product-groups {
+  margin-top: 10px;
+}
+
 .product-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
   display: none;
 }
 
 .product-group.active {
-  display: flex;
+  display: block;
 }
+
+.d-none {
+  display: none;
+}
+
 
 .col-12.col-md-4:nth-child(-n+3) {
   margin-bottom: 30px; 
@@ -832,7 +904,7 @@
 }
 
 .card {
-  max-width: 300px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -1011,40 +1083,22 @@
 .footer ul li a:hover {
   color: #ffeb99;
 }
-.footer .social-icons {
+.social-icons {
+  margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+  gap: 10px; 
+  align-items: center; 
+  justify-content: center;
 }
 
-.footer .social-icon {
-  font-size: 15px;
-  color: #e4dcdc;
-  background-color: #080808;
-  padding: 12px;
-  border-radius: 30%;
-  transition: all 0.3s ease;
+.social-icons i {
+  font-size: 24px; 
+  color: #ccc2c2; 
+  transition: color 0.3s ease;
 }
 
-.footer .social-icon:hover {
-  color: #050202;
-  background-color: #007bff; 
-}
-
-.footer .facebook:hover {
-  background-color: #3b5998;
-}
-
-.footer .instagram:hover {
-  background-color: #e4405f;
-}
-
-.footer .whatsapp:hover {
-  background-color: #25d366;
-}
-
-.footer .social-icon i {
-  margin: 0;
+.social-icons i:hover {
+  color: #0f0f0d;
 }
 
 @media (max-width: 768px) {

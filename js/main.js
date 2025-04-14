@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+//العملات
+
 //فتح وإغلاق قائمة العملات
 function toggleCurrencyMenu() {
     let currencyOptions = document.querySelector(".currency-options");
@@ -62,87 +64,116 @@ document.addEventListener("click", function (event) {
         currencyOptions.classList.remove("open");
     }
 });
+//end
+
+
 
 //sidebar categories
-document.querySelector(".category-sidebar-toggle").addEventListener("click", function() {
-    let categorySidebar = document.querySelector(".category-sidebar");
-    if (categorySidebar) {
+// إضافة الأحداث للتحكم في ظهور السايدبار
+window.addEventListener("load", function() {
+    const categorySidebar = document.querySelector(".category-sidebar");
+    const sidebarToggleButton = document.querySelector(".category-sidebar-toggle");
+  
+    // التحقق إذا كانت الصفحة هي صفحة الهوم
+    if (window.location.pathname === "/home.html") {
+      // السايدبار يكون مفتوح في صفحة الهوم
+      categorySidebar.classList.add("active");
+    } else {
+      // في باقي الصفحات يجب أن يكون مغلقًا بشكل افتراضي
+      categorySidebar.classList.remove("active");
+    }
+  
+    // حدث النقر على الزر لفتح وإغلاق السايدبار
+    if (sidebarToggleButton) {
+      sidebarToggleButton.addEventListener("click", function() {
         categorySidebar.classList.toggle("active");
+      });
     }
-});
+  });
+  //end sidebar categories
 
-//shop
+  
+  
+//details sidebar
 function showPopup(id) {
-    let popup = document.getElementById(id);
-    if (popup) {
-        popup.style.display = "block";
-    }
+  document.getElementById(id).style.display = "block";
 }
 
 function hidePopup(id) {
-    let popup = document.getElementById(id);
-    if (popup) {
-        popup.style.display = "none";
-    }
+  document.getElementById(id).style.display = "none";
 }
+
+//end details
 
 //shop
 function openShopPopup() {
-    let shopPopup = document.getElementById("shop-popup");
-    if (shopPopup) {
-        shopPopup.style.display = "block";
-    }
-}
-
-function closeShopPopup() {
-    let shopPopup = document.getElementById("shop-popup");
-    if (shopPopup) {
-        shopPopup.style.display = "none";
-    }
-}
+    document.getElementById('shop-popup').style.display = 'block';
+  }
+  
+  function closeShopPopup() {
+    document.getElementById('shop-popup').style.display = 'none';
+  }
+  //end shop
 
 //products
+// التنقل بين التصنيفات
+const tabLinks = document.querySelectorAll(".tab-link");
+const productGroups = document.querySelectorAll(".product-groups");
 
-let currentGroup = 1;
-const totalGroups = 2; // عدد المجموعات (هنا فقط 2 مجموعة)
+tabLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
 
-// وظيفة لعرض المجموعة التالية
-function showNextGroup() {
-    // إخفاء المجموعة الحالية
-    document.getElementById(`group${currentGroup}`).classList.remove('active');
+    // تفعيل اللينك المختار
+    tabLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
 
-    // التحقق من المجموعة التالية
-    currentGroup = currentGroup === totalGroups ? 1 : currentGroup + 1;
+    // اظهار المجموعة المختارة
+    productGroups.forEach(group => group.classList.add("d-none"));
+    document.getElementById(link.dataset.tab).classList.remove("d-none");
+  });
+});
 
-    // عرض المجموعة التالية
-    document.getElementById(`group${currentGroup}`).classList.add('active');
+// التنقل بين مجموعات نفس التصنيف
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
+rightArrow.addEventListener("click", () => moveGroup(1));
+leftArrow.addEventListener("click", () => moveGroup(-1));
+
+function moveGroup(direction) {
+  const activeTab = document.querySelector(".tab-link.active").dataset.tab;
+  const groups = document.querySelectorAll(`#${activeTab} .product-group`);
+
+  let currentIndex = Array.from(groups).findIndex(group => group.classList.contains("active"));
+
+  groups[currentIndex].classList.remove("active");
+
+  currentIndex += direction;
+
+  if (currentIndex >= groups.length) currentIndex = 0;
+  if (currentIndex < 0) currentIndex = groups.length - 1;
+
+  groups[currentIndex].classList.add("active");
 }
+//end products
 
-// وظيفة لعرض المجموعة السابقة
-function showPrevGroup() {
-    // إخفاء المجموعة الحالية
-    document.getElementById(`group${currentGroup}`).classList.remove('active');
-
-    // التحقق من المجموعة السابقة
-    currentGroup = currentGroup === 1 ? totalGroups : currentGroup - 1;
-
-    // عرض المجموعة السابقة
-    document.getElementById(`group${currentGroup}`).classList.add('active');
-}
-
-// إضافة الأحداث للأسهم
-document.querySelector('.left-arrow').addEventListener('click', showPrevGroup);
-document.querySelector('.right-arrow').addEventListener('click', showNextGroup);
 
    //swiper bundle
-var swiper = new Swiper(".swiper", {
-        loop: true,
-        spaceBetween: 20,
-        slidesPerView: 3, /* عرض 3 كروت بجانب بعض */
-        pagination: { el: ".swiper-pagination", clickable: true },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-    });
-
+// إذا كنت تستخدم SwiperJS
+var swiper = new Swiper('.swiper', {
+    slidesPerView: 'auto', // لتحديد عدد الكروت المعروضة بناءً على الحجم
+    spaceBetween: 10, // المسافة بين الكروت
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  //end swiper
 
 
 
@@ -162,4 +193,22 @@ function toggleDetails(button) {
       button.innerHTML = "🔽 عرض التفاصيل";
   }
 }
+//end
+
+
+//shop all
+
+// هات كل اللينكات
+const links = document.querySelectorAll('.category-item a');
+
+// هات رابط الصفحة الحالي
+const currentPage = window.location.pathname;
+
+// شوف أي رابط يتوافق مع الصفحة الحالية واضيف عليه active
+links.forEach(link => {
+  if (link.getAttribute('href') && currentPage.includes(link.getAttribute('href'))) {
+    link.classList.add('active');
+  }
+});
+
 
