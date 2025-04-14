@@ -1,4 +1,5 @@
 // ====== Sidebar Menu ======
+// ====== Sidebar Menu ======
 function toggleMenu(section) {
   let sidebar = document.getElementById("sidebar");
   let links = document.getElementById("links");
@@ -23,6 +24,7 @@ function toggleMenu(section) {
     btnExtra.classList.toggle('active', section === 'extra');
   }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth <= 768) {
@@ -177,3 +179,4 @@ categoryLinks.forEach(link => {
     link.classList.add('active');
   }
 });
+
