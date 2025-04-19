@@ -78,14 +78,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around !important;
-  margin-bottom: -50px !important;
+  margin-top: 10px;
 }
 
 /* تنسيق اللوجو */
 .logo img {
-  width: 100%;
-  height: 150px;
+  height: auto;
+  width: 150px;
   font-size: 40px;
+  margin-right: 20px;
 }
 
 /* تنسيق صندوق البحث */
@@ -258,6 +259,7 @@
 
 .menu-icon {
   font-size: 24px;
+  margin: 16px;
   cursor: pointer;
   display: none;
 }
@@ -726,84 +728,148 @@
   flex-direction: column;
 }
 
-/* footer */
 .footer {
-  background-color: #0d0202;
-  width: 100;
-  height: 400px;
-  color: white;
-  display: flex;
-  justify-content: space-around;  
-  padding: 70px 0px;
-  font-family: Arial, sans-serif;
+  background-color: #2F5A2A ;
 }
-.footer .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center;
+.footercontainer {
+  width: 100%;
+  padding: 70px 30px 20px;
 }
 
-.top-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-footer {
-  width: 161px;
-  margin-top: -72px;
-}
-
-.footer h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-bottom: 8px;
-}
-
-.footer ul li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer ul li a:hover {
-  color: #ffeb99;
-}
 .social-icons {
-  margin-top: 2rem;
   display: flex;
-  gap: 10px; 
-  align-items: center; 
   justify-content: center;
 }
 
-.social-icons i {
-  font-size: 24px; 
-  color: #ccc2c2; 
-  transition: color 0.3s ease;
+.social-icons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-.social-icons i:hover {
-  color: #0f0f0d;
+.social-icons a i {
+  font-size: 30px;
+  text-align: center;
+  opacity: 0.9;
+  color: #000;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding-top: 20px;
-    height: 100%;
+.social-icons a:hover {
+  background-color: #2F5A2A ;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.social-icons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footernav {
+  margin: 30px 0;
+}
+
+.footernav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.footernav ul li a {
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  font-size: 1.3em;
+  opacity: 0.7; 
+  transition: 0.5s;
+}
+
+.footernav ul li a:hover {
+  opacity: 1;
+}
+
+.footerbootem {
+  background-color: white;
+  /* margin-top: 20px; تعديل الهامش العلوي */
+  padding: 20px 0; 
+  color: white; /* إضافة لون نص افتراضي إذا لزم الأمر */
+}
+
+.footerbootem .logo img {
+  width: 150px;
+  height: auto;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.footerbootem .buy {
+  display: flex;
+  justify-content: flex-end; /* لمحاذاة الصور إلى اليمين في الشاشات الكبيرة */
+  align-items: center; /* لمحاذاة الصور عموديًا */
+}
+
+.footerbootem .buy img {
+  height: auto;
+  margin-left: 21px;
+  transition: transform 0.3s ease;
+}
+.img-insta {
+  width: 90px;
+  
+}
+
+.img-pp {
+  width: 104px;
+}
+
+.img-nbe {
+  width: 100px;
+}
+
+.img-voda {
+  width: 140px;
+  margin-right: -25px;
+}
+
+.img-binance {
+  width: 108px;
+}
+
+.footerbootem .logo img:hover,
+.footerbootem .buy img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 780px) { /* للشاشات الصغيرة (أقل من 768 بكسل) */
+  .footernav ul {
+      flex-direction: column;
+      align-items: center;
   }
-  .logo-footer {
-    margin-top: 0px;
+  .footernav ul li {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+  }
+  .footerbootem .buy {
+      justify-content: center;
+      margin-top: 15px; 
+      flex-direction: column;
+  }
+  .footerbootem .buy img {
+      margin: 0 5px; /* تقليل الهوامش الجانبية وزيادة الهوامش الرأسية قليلاً */
+      width: 130px;
+      /* تصغير حجم الصور في الشاشات الصغيرة */
+  }
+  .footerbootem .logo{
+      margin-bottom: 15px;
+      justify-content: center;
   }
 }

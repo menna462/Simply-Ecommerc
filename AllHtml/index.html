@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="../Allcss/home.css" />
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- fixed -->
+    <!-- top bar -->
+    <!-- Top Bar for Large Screens -->
+    <div class="top-bar d-none d-md-block">
+      <div class="container">
+        <p class="subscription-text">Your Subscription is our passion...</p>
+        <div class="top-links">
+          <a href="https://www.facebook.com/simplysoft.aii"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/simplysoft.ai"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#">NEWSLETTER</a>
+          <a href="#">CONTACT US</a>
+          <a href="#">ENG</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Bar for Small Screens -->
+    <div class="mobile-bar d-block d-md-none">
+      <div class="container">
+        <div class="sociel">
+          <a href="https://www.facebook.com/simplysoft.aii"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/simplysoft.ai"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!--end bar  -->
+    <!-- Navbar -->
+    <div class="container">
+      <div class="row">
+        <div class="navbar tex-center">
+          <!-- Menu Icon for Mobile -->
+          <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <!-- Logo -->
+          <div class="logo">
+            <img src="../images/BIBASATA-nav.png" alt="Elite Logo" />
+          </div>
+          <!-- Search Box -->
+          <div class="search-box mr-3">
+            <input type="text" placeholder="Search for products" />
+            <div class="category-dropdown">
+              <select aria-label="Select Category">
+                <option>Select Category</option>
+                <option>Ai</option>
+                <option>Bundles</option>
+                <option>Design</option>
+                <option>Engineering</option>
+                <option>Software</option>
+                <option>Antivirus</option>
+                <option>Office</option>
+                <option>Windows</option>
+              </select>
+            </div>
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+          <!-- Icons -->
+          <div class="icons mr-3">
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <!-- Sidebar Menu -->
+          <div id="overlay" onclick="toggleMenu('close')"></div>
+          <div id="sidebar" class="sidebar">
+            <div class="close-btn" onclick="toggleMenu('close')">&times;</div>
+
+            <div class="menu-buttons">
+              <button onclick="toggleMenu('links')">menue</button>
+              <button onclick="toggleMenu('extra')">BROWSE CATEGORIES</button>
+            </div>
+
+            <div id="links" class="menu-section">
+              <a href="./index.html">Home</a>
+              <a href="./shop.html">Shop</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./about.html">About Us</a>
+            </div>
+
+            <div id="extra" class="menu-section">
+              <a href="../AllHtml/ai.html">Ai</a>
+              <a href="../AllHtml/windows.html">Windows</a>
+              <a href="../AllHtml/software.html">software</a>
+              <a href="../AllHtml/office.html">office</a>
+              <a href="../AllHtml/design.html">design</a>
+              <a href="../AllHtml/bundles.html">bundles</a>
+            </div>
+          </div>
+          <div class="login-register-container">
+            <button class="login-register-button">
+              <a href="./login.html" class="login-link">LOGIN</a> /
+              <a href="./register.html" class="register-link">REGISTER</a>
+            </button>
+          </div>
+          <div class="currency-select-wrapper">
+            <div class="currency-select" onclick="toggleCurrencyMenu()">
+              <div class="currency-selected">
+                <span
+                  class="currency-flag"
+                  style="
+                    background-image: url('https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/eg.svg');
+                  "
+                ></span>
+                <span class="currency-text">EGP</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <ul class="currency-options">
+                <li
+                  onclick="selectCurrency('EGP', 'https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/eg.svg')"
+                >
+                  <span
+                    class="currency-flag"
+                    style="
+                      background-image: url('https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/eg.svg');
+                    "
+                  ></span>
+                  <span class="currency-text">EGP</span>
+                </li>
+                <li
+                  onclick="selectCurrency('USD', 'https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/us.svg')"
+                >
+                  <span
+                    class="currency-flag"
+                    style="
+                      background-image: url('https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/us.svg');
+                    "
+                  ></span>
+                  <span class="currency-text">USD</span>
+                </li>
+                <li
+                  onclick="selectCurrency('EUR', 'https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/eu.svg')"
+                >
+                  <span
+                    class="currency-flag"
+                    style="
+                      background-image: url('https://elitesoft-ai.com/wp-content/plugins/yaycurrency-pro/assets/dist/flags/eu.svg');
+                    "
+                  ></span>
+                  <span class="currency-text">EUR</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between py-2 px-4"
+        >
+          <!-- زر فتح وإغلاق السايدبار -->
+          <button
+            class="btn category-sidebar-toggle"
+            data-toggle="collapse"
+            data-target=".category-sidebar "
+          >
+            <i class="fas fa-bars"></i> BROWSE CATEGORIES
+            <i class="fas fa-chevron-down arrow-icon"></i>
+          </button>
+
+          <nav class="main-nav">
+            <ul class="left-links">
+              <li class="navli"><a href="./home.html">HOME</a></li>
+
+              <li
+                class="navli"
+                class="nav-item"
+                onmouseover="openShopPopup()"
+                onmouseout="closeShopPopup()"
+              >
+                <a href="./shop.html" class="nav-link">SHOP</a>
+                <div id="shop-popup" class="shop-popup">
+                  <div class="container">
+                    <div class="row">
+                      <h3>FOR DESIGNER</h3>
+                      <ul class="maga-menu-link">
+                        <li><a href="">Adobe all apps</a></li>
+                        <li><a href="">Motion Array</a></li>
+                        <li><a href="">Freepik(shared Accounts)</a></li>
+                        <li><a href="">Capcut</a></li>
+                        <li><a href="">ChatGPT</a></li>
+                        <li><a href="">Midjourney AI</a></li>
+                        <li><a href="">Runway Video AI</a></li>
+                        <li><a href="">Canva Pro</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <h3>FOR DESIGNER</h3>
+                      <ul class="maga-menu-link">
+                        <li><a href="">Adobe all apps</a></li>
+                        <li><a href="">Motion Array</a></li>
+                        <li><a href="">Freepik(shared Accounts)</a></li>
+                        <li><a href="">Capcut</a></li>
+                        <li><a href="">ChatGPT</a></li>
+                        <li><a href="">Midjourney AI</a></li>
+                        <li><a href="">Runway Video AI</a></li>
+                        <li><a href="">Canva Pro</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="../images/Egipt.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 
+                                <div id="shop-popup" class="shop-popup">
+                  <div class="shop-popup-content">
+                    <div class="shop-columns">
+                      <div class="one-colm">
+                        <h3>FOR DESIGNER</h3>
+                        <ul>
+                          <li><a href="">Adobe all apps</a></li>
+                          <li><a href="">Motion Array</a></li>
+                          <li><a href="">Freepik</a>(shared Accounts)</li>
+                          <li><a href="">Capcut</a></li>
+                          <li><a href="">ChatGPT</a></li>
+                          <li><a href="">Midjourney AI</a></li>
+                          <li><a href="">Runway Video AI</a></li>
+                          <li><a href="">Canva Pro</a></li>
+                        </ul>
+                      </div>
+                      <div class="two-colm">
+                        <h3>SOFTWARES</h3>
+                        <ul>
+                          <li>Windows 10 Pro</li>
+                          <li>Windows 11 Pro</li>
+                          <li>Office 365 Family</li>
+                          <li>Kaspersky Premium</li>
+                          <li>Office 2016</li>
+                          <li>Office 2019</li>
+                          <li>Office 2021</li>
+                          <li>Pacdora</li>
+                          <li>Avast Ultimate</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                -->
+              </li>
+              <li class="navli"><a href="./about.html">ABOUT US</a></li>
+              <li class="navli"><a href="./contact.html">CONTACT US</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 d-none d-lg-block">
+          <aside class="category-sidebar active">
+            <ul class="list-group">
+              <!-- ai -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('ai-popup')"
+                onmouseout="hidePopup('ai-popup')"
+              >
+                <a href="./ai.html"> <i class="fas fa-brain"></i> Ai </a>
+                <div class="popup-box" id="ai-popup">
+                  <li><a href="">ChatGpt Plus</a></li>
+                  <li><a href="">Run Way</a></li>
+                  <li><a href="">Midjourny</a></li>
+                </div>
+              </li>
+              <!-- window -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('windows-popup')"
+                onmouseout="hidePopup('windows-popup')"
+              >
+                <a href="./windows.html">
+                  <i class="fab fa-windows"></i> Windows
+                </a>
+                <div class="popup-box" id="windows-popup">
+                  <li><a href="">Windows 10 Pro</a></li>
+                  <li><a href="">Windows 11 Pro</a></li>
+                </div>
+              </li>
+              <!-- design -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('design-popup')"
+                onmouseout="hidePopup('design-popup')"
+              >
+                <a href="./design.html">
+                  <i class="fas fa-paint-brush"></i> Design
+                </a>
+                <div class="popup-box" id="design-popup">
+                  <li><a href="">Adobe Creative Cloud</a></li>
+                  <li><a href="">Freepik</a></li>
+                  <li><a href="">CapCat Pro </a></li>
+                  <li><a href="">Envato Elements</a></li>
+                  <li><a href="">Canva Pro</a></li>
+                  <li><a href="">Motion</a></li>
+                  <li><a href="">Autodesk</a></li>
+                  <li><a href="">Figma</a></li>
+                  <li><a href="">Pacdora</a></li>
+                </div>
+              </li>
+              <!-- office -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('office-popup')"
+                onmouseout="hidePopup('office-popup')"
+              >
+                <a href="./office.html">
+                  <i class="fas fa-briefcase"></i> Office
+                </a>
+                <div class="popup-box" id="office-popup">
+                  <li><a href="">Office 365</a></li>
+                  <li><a href="">Office 2016 Pro Plus</a></li>
+                  <li><a href="">Office 2019 Pro Plus</a></li>
+                  <li><a href="">Office 2021 Pro Plus</a></li>
+                </div>
+              </li>
+              <!-- antivirus -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('software-popup')"
+                onmouseout="hidePopup('software-popup')"
+              >
+                <a href="./software.html">
+                  <i class="fas fa-laptop"></i> Software
+                </a>
+                <div class="popup-box" id="software-popup">
+                  <li><a href="">Kaspersky Premium</a></li>
+                  <li><a href="">Bitdefend Er </a></li>
+                  <li><a href="">Mcafee</a></li>
+                </div>
+              </li>
+              <!-- software -->
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('software-popup')"
+                onmouseout="hidePopup('software-popup')"
+              >
+                <a href="./software.html">
+                  <i class="fas fa-laptop"></i> Software
+                </a>
+                <div class="popup-box" id="software-popup">
+                  <li><a href="">CapCut Pro</a></li>
+                  <li><a href="">Linkedin Premium</a></li>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item"
+                onmouseover="showPopup('bundles-popup')"
+                onmouseout="hidePopup('bundles-popup')"
+              >
+                <a href="./bundles.html">
+                  <i class="fas fa-box"></i> Bundles
+                </a>
+                <div class="popup-box" id="bundles-popup">
+                  <li><a href="">Adobe + FreePik</a></li>
+                  <li><a href="">Adobe + ChatGpt</a></li>
+                  <li><a href="">Adobe + Envato</a></li>
+                  <li><a href="">FreePik + Envato</a></li>
+                  <li><a href="">ChatGpt + Midjourny</a></li>
+                  <li><a href="">Windows + Kaspersky</a></li>
+                  <li><a href=""> Windows+ office</a></li>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <!-- slider -->
+        <div class="col-lg-9">
+          <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- الشريحة الأولى -->
+              <div class="carousel-item active">
+                <img
+                  class="d-block w-100"
+                  src="../images/bundle2.webp"
+                  alt="Slide 1"
+                />
+                <div class="carousel-caption text-center">
+                  <h2 class="text-white font-weight-bold">
+                    أفضل العروض الحصرية
+                  </h2>
+                  <p class="text-white">احصل على خصومات تصل إلى 50%</p>
+                  <a href="#" class="btn btn-primary mt-2">Buy Now</a>
+                </div>
+              </div>
+
+              <!-- الشريحة الثانية -->
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="../images/bundl3.webp"
+                  alt="Slide 2"
+                />
+                <div class="carousel-caption text-center">
+                  <h2 class="text-white font-weight-bold">
+                    أحدث المنتجات التقنية
+                  </h2>
+                  <p class="text-white">تسوق الآن واستمتع بتجربة فريدة</p>
+                  <a href="#" class="btn btn-success mt-2">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- أزرار التحكم -->
+            <a
+              class="carousel-control-prev"
+              href="#header-carousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#header-carousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- End Navbar -->
+    <!-- end fixed -->
+
+    <!-- start products -->
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <!-- اللينكات على اليسار -->
+        <div class="col-md-6">
+          <span class="products fw-bold fs-4 me-3">PRODUCTS</span>
+          <a href="#" class="tab-link active" data-tab="best-seller"
+            >BEST SELLER</a
+          >
+        </div>
+
+        <!-- الأسهم على أقصى اليمين -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <div class="nav-arrows">
+            <i class="fa-solid fa-chevron-left left-arrow"></i>
+            <i class="fa-solid fa-chevron-right right-arrow"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="products-content">
+          <!-- BEST SELLER مجموعتين -->
+          <div class="product-actions">
+            <a href="detailsproducts.html" class="link">
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <button class="btn btn-success btn-sm">
+                <span>Select Options</span>
+              </button>
+              <span class="icon"><i class="fa-solid fa-search"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end products -->
+    <!-- start Bundle -->
+    <div class="container">
+      <div class="swiper">
+        <h2 class="title-with-underline">Bundle</h2>
+        <div class="swiper-wrapper">
+          <swiper-slide class="col-lg-4 col-md-6 col-12">
+            <div class="card shadow-sm position-relative bundle-card">
+              <div class="position-relative overflow-hidden">
+                <img
+                  src="../images/Bundels-2.jpg"
+                  class="card-img-top"
+                  alt="Bundle 1"
+                />
+                <div class="bundle-icons">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <a href="detailsproducts.html" class="link">
+                  <button class="selected-option">Select Options</button>
+                </a>
+              </div>
+              <div class="card-body text-center bundle-info">
+                <h5 class="card-title">AI Bundle (ChatGPT + Midjourney)</h5>
+                <p class="card-text text-muted">AI Bundles, Design</p>
+                <p class="bundle-price">
+                  1,250 EGP <span class="text-muted"><del>3,200 EGP</del></span>
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <swiper-slide class="col-lg-4 col-md-6 col-12">
+            <div class="card shadow-sm position-relative bundle-card">
+              <div class="position-relative overflow-hidden">
+                <img
+                  src="../images/bundl3.webp"
+                  class="card-img-top"
+                  alt="Bundle 2"
+                />
+                <div class="bundle-icons">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <a href="detailsproducts.html" class="link">
+                  <button class="selected-option">Select Options</button>
+                </a>
+              </div>
+              <div class="card-body text-center bundle-info">
+                <h5 class="card-title">AI Bundle (ChatGPT + Midjourney)</h5>
+                <p class="card-text text-muted">AI Bundles, Design</p>
+                <p class="bundle-price">
+                  1,250 EGP <span class="text-muted"><del>3,200 EGP</del></span>
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <swiper-slide class="col-lg-4 col-md-6 col-12">
+            <div class="card shadow-sm position-relative bundle-card">
+              <div class="position-relative overflow-hidden">
+                <img
+                  src="../images/bundle2.webp"
+                  class="card-img-top"
+                  alt="Bundle 3"
+                />
+                <div class="bundle-icons">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <a href="detailsproducts.html" class="link">
+                  <button class="selected-option">Select Options</button>
+                </a>
+              </div>
+              <div class="card-body text-center bundle-info">
+                <h5 class="card-title">AI Bundle (ChatGPT + Midjourney)</h5>
+                <p class="card-text text-muted">AI Bundles, Design</p>
+                <p class="bundle-price">
+                  1,250 EGP <span class="text-muted"><del>3,200 EGP</del></span>
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+        </div>
+        <!-- النقاط والتوجيه -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- end Bundle -->
+    <!--start footer  -->
+    <div class="footer">
+      <div class="footercontainer">
+        <div class="social-icons">
+          <a href="#" class=""><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class=""><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class=""><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footernav">
+          <ul>
+            <li class=""><a href="">Home</a></li>
+            <li class=""><a href=""> Shop</a></li>
+            <li class=""><a href="">About Us</a></li>
+            <li class=""><a href="">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerbootem">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 logo">
+              <img src="../images/BIBASATA-nav.png" alt="Image 1" />
+            </div>
+            <div class="col-md-6 text-center text-md-end buy">
+              <img
+                src="../images/vodavon-removebg-preview.png"
+                class="img-voda"
+              />
+              <img src="../images/instapay.png" class="img-insta" />
+              <img src="../images/NBE-logo.svg" class="img-nbe" />
+              <img src="../images/pp.svg" class="img-pp" />
+              <img src="../images/binance2.png" class="img-binance" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../bootstrap/js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
