@@ -100,44 +100,33 @@ function closeShopPopup() {
 }
 
 // ====== Product Tabs & Groups ======
-const tabLinks = document.querySelectorAll(".tab-link");
-const productGroups = document.querySelectorAll(".product-groups");
+let currentGroup = 1;
+const totalGroups = document.querySelectorAll('.products-group').length;
 
-tabLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    tabLinks.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-
-    productGroups.forEach(group => group.classList.add("d-none"));
-    document.getElementById(link.dataset.tab).classList.remove("d-none");
+// تفعيل الجروب الحالي
+function showGroup(groupNumber) {
+  document.querySelectorAll('.products-group').forEach(group => {
+    group.classList.remove('active');
   });
+  document.getElementById('group-' + groupNumber).classList.add('active');
+}
+
+// السهم الشمال
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  currentGroup--;
+  if (currentGroup < 1) currentGroup = totalGroups;
+  showGroup(currentGroup);
 });
 
-const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
+// السهم اليمين
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  currentGroup++;
+  if (currentGroup > totalGroups) currentGroup = 1;
+  showGroup(currentGroup);
+});
 
-if (rightArrow && leftArrow) {
-  rightArrow.addEventListener("click", () => moveGroup(1));
-  leftArrow.addEventListener("click", () => moveGroup(-1));
-}
-
-function moveGroup(direction) {
-  const activeTab = document.querySelector(".tab-link.active").dataset.tab;
-  const groups = document.querySelectorAll(`#${activeTab} .product-group`);
-
-  let currentIndex = Array.from(groups).findIndex(group => group.classList.contains("active"));
-  if (currentIndex === -1) return;
-
-  groups[currentIndex].classList.remove("active");
-
-  currentIndex += direction;
-  if (currentIndex >= groups.length) currentIndex = 0;
-  if (currentIndex < 0) currentIndex = groups.length - 1;
-
-  groups[currentIndex].classList.add("active");
-}
+// أول مرة — خلي أول جروب ظاهر
+showGroup(1);
 
 // ====== Swiper JS ======
 var swiper = new Swiper('.swiper', {
